@@ -75,6 +75,10 @@ pip install -r requirements.txt
 ![Chat interface](images/screenshot.png)
 **Used Google Gemma-2-2B-IT(IQ3_M) Model**
 
+##  Let's build together
+
+If you have similar projects and would like to work together, contact me. I'd be happy to build something together :)
+Email:beratdurak@bitsegments.com
 
 ##  License
 
