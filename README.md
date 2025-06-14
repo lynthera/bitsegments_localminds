@@ -1,6 +1,6 @@
-# MemCore LLM Interface
+# BitSegments Local Minds
 
-MemCore is a lightweight, CPU-friendly conversational AI interface built on `llama-cpp-python`. It includes a memory system for personalized, context-aware interactions — even on older hardware.
+Local Minds is a lightweight, CPU-friendly conversational AI interface built on `llama-cpp-python`. It includes a memory system for personalized, context-aware interactions — even on older hardware.
 
 ##  Features
 
@@ -21,7 +21,7 @@ project/
 ├── templates/
 │   └── index.html        # Frontend HTML
 ├── static/
-│   └── assets/           # Vite-built React frontend
+│   └── assets/           # Frontend
 ├── models/               # Place your .gguf model file here
 └── memory/               # Stores session memories (auto-created)
 ```
@@ -36,6 +36,8 @@ pip install -r requirements.txt
 
 You must have Python 3.10+ installed. CPU usage is default; GPU support can be enabled by changing `n_gpu_layers=-1`.
 
+If you are using Windows, make sure that **cmake** and **nmake** are installed on your system.
+
 ##  How to Run
 
 ```bash
@@ -46,18 +48,7 @@ Then visit: [http://localhost:5001](http://localhost:5001)
 
 ##  Model Setup
 
-Place your `.gguf` model file under the `models/` directory. Make sure the `model_path` in `app.py` matches your filename.
-
-Example:
-
-```python
-llm = Llama(
-    model_path="models/gemma-2-2b-it-Q4_K_M.gguf",
-    n_ctx=2048,
-    n_threads=4,
-    n_gpu_layers=0
-)
-```
+Place your `.gguf` model file under the `models/` directory. Please place only one model in the directory. Switching between models is not possible at the moment.
 
 ##  Memory System
 
@@ -79,10 +70,12 @@ Install via:
 pip install -r requirements.txt
 ```
 
-##  Screenshots
+##  Screenshot
 
-_Add demo screenshots here if desired_
+![Chat interface](images/screenshot.png)
+**Used Google Gemma-2-2B-IT(IQ3_M) Model**
+
 
 ##  License
 
-MIT or insert your own license terms here.
+MIT License
